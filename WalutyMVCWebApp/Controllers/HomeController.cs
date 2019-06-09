@@ -5,6 +5,8 @@ using WalutyBusinessLogic.DatabaseLoading;
 using WalutyBusinessLogic.LoadingFromFile;
 using WalutyMVCWebApp.Models;
 using X.PagedList;
+using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace WalutyMVCWebApp.Controllers
 {
@@ -13,15 +15,29 @@ namespace WalutyMVCWebApp.Controllers
         private readonly ILoader _loader;
         private readonly ICurrencyRepository _repository;
         private int _pageSize = 5;
+        private const string ReportModuleUrl = "http://localhost:5006";
 
         public HomeController(ILoader loader, ICurrencyRepository repository)
         {
             _loader = loader;
             _repository = repository;
         }
-        public IActionResult Index(int? page, string searchString)
+        public async Task<IActionResult> Index(int? page, string searchString)
         {
-            int pageNumber = page ?? 1;
+
+            using (var client = new HttpClient())
+            {
+                var reports = await client.GetAsync($"{ReportModuleUrl}/api/reports");
+                var message = await reports.Content.ReadAsStreamAsync();
+            }
+
+            var report = new ReportDto()
+            {
+                 = "Przemek"
+            };
+        
+
+        int pageNumber = page ?? 1;
             IPagedList<CurrencyInfo> listOfResults = null;
 
             if (!String.IsNullOrWhiteSpace(searchString))

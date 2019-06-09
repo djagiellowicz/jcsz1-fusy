@@ -10,6 +10,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WalutyMVCWebApp", "WalutyMV
 		{2276890E-C6AC-49A1-A593-C252FE28FDCF} = {2276890E-C6AC-49A1-A593-C252FE28FDCF}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReportModule", "ReportModule\ReportModule.csproj", "{2812D858-5649-4792-A790-508165B1D03B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +26,10 @@ Global
 		{E5A82811-A896-49AF-A06F-A9BC3C338905}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E5A82811-A896-49AF-A06F-A9BC3C338905}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E5A82811-A896-49AF-A06F-A9BC3C338905}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2812D858-5649-4792-A790-508165B1D03B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2812D858-5649-4792-A790-508165B1D03B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2812D858-5649-4792-A790-508165B1D03B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2812D858-5649-4792-A790-508165B1D03B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
